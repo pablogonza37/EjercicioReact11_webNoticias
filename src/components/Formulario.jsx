@@ -1,6 +1,5 @@
 import { Form } from "react-bootstrap";
 
-
 const Formulario = ({ onCategoryChange }) => {
   const handleCategoryChange = (e) => {
     const newCategory = e.target.value;
@@ -21,12 +20,21 @@ const Formulario = ({ onCategoryChange }) => {
             onChange={handleCategoryChange}
           >
             <option value="world">General</option>
-            <option value="business">Business</option>
-            <option value="entertainment">Entertainment</option>
-            <option value="health">Health</option>
-            <option value="science">Science</option>
-            <option value="sports">Sports</option>
-            <option value="technology">Technology</option>
+            <option value="business">business</option>
+            <option value="domestic">domestic</option>
+            <option value="education">education</option>
+            <option value="entertainment">entertainment</option>
+            <option value="environment">environment</option>
+            <option value="food">food</option>
+            <option value="health">health</option>
+            <option value="lifestyle">lifestyle</option>
+            <option value="politics">politics</option>
+            <option value="science">science</option>
+            <option value="sports">sports</option>
+            <option value="technology">technology</option>
+            <option value="top">top</option>
+            <option value="tourism">tourism</option>
+            <option value="other">other</option>
           </Form.Select>
         </Form.Group>
       </Form>
