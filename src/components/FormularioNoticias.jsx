@@ -1,9 +1,10 @@
 import { Form } from "react-bootstrap";
+import ListaNoticias from "./ListaNoticias";
 
 const FormularioNoticias = () => {
     return (
-        <section>
-          <Form>
+        <section className="mt-4">
+          <Form className="p-4">
           <Form.Group
             className="mb-3 d-flex justify-content-around"
             controlId="exampleForm.ControlInput1"
@@ -17,6 +18,7 @@ const FormularioNoticias = () => {
             </Form.Select>
           </Form.Group>
         </Form>  
+        <ListaNoticias></ListaNoticias>
         </section>
     );
 };
