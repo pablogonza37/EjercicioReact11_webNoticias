@@ -9,10 +9,10 @@ import ListaNoticias from "./components/ListaNoticias";
 
 function App() {
 
-  const [category, setCategory] = useState('world');
+  const [categoria, setCategoria] = useState('world');
 
-  const handleCategoryChange = (newCategory) => {
-    setCategory(newCategory);
+  const handleCategoryChange = (newCategoria) => {
+    setCategoria(newCategoria);
   };
 
   return (
@@ -20,7 +20,7 @@ function App() {
       <Titulo></Titulo>
       <Container className="mainPage">
         <Formulario onCategoryChange={handleCategoryChange}></Formulario>
-        <ListaNoticias category={category}></ListaNoticias>
+        <ListaNoticias categoria={categoria}></ListaNoticias>
       </Container>
       <Footer></Footer>
     </>

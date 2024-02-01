@@ -2,8 +2,8 @@ import { Form } from "react-bootstrap";
 
 const Formulario = ({ onCategoryChange }) => {
   const handleCategoryChange = (e) => {
-    const newCategory = e.target.value;
-    onCategoryChange(newCategory);
+    const newCategoria = e.target.value;
+    onCategoryChange(newCategoria);
   };
 
   return (
