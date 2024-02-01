@@ -1,15 +1,26 @@
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import FormularioNoticias from "./components/FormularioNoticias";
+import Formulario from "./components/Formulario";
 import Footer from "./components/Footer";
+import Titulo from "./Titulo";
+import { useState } from "react";
+import ListaNoticias from "./components/ListaNoticias";
 
 function App() {
+
+  const [category, setCategory] = useState('world');
+
+  const handleCategoryChange = (newCategory) => {
+    setCategory(newCategory);
+  };
+
   return (
     <>
-      <h1 className="display-1 text-center text-bg-dark py-3">Noticias</h1>
+      <Titulo></Titulo>
       <Container className="mainPage">
-        <FormularioNoticias></FormularioNoticias>
+        <Formulario onCategoryChange={handleCategoryChange}></Formulario>
+        <ListaNoticias category={category}></ListaNoticias>
       </Container>
       <Footer></Footer>
     </>

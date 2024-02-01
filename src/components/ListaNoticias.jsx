@@ -1,22 +1,35 @@
 import { Row, Col } from "react-bootstrap";
-import ItemNoticia from "./ItemNoticia";
+import Noticia from "./Noticia";
+import React, { useState, useEffect } from 'react';
 
-const ListaNoticias = () => {
+const ListaNoticias = ({ category }) => {
+    const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    fetchNews(category);
+  }, [category]);
+
+  const fetchNews = async (category) => {
+
+    try {
+      const response = await fetch(`https://newsdata.io/api/1/news?apikey=pub_374867eb717c36cfe3081169e0a55ea02fe14&country=au,us&category=${category}`);
+      const data = await response.json();
+      setNews(data.results || []);
+    } catch (error) {
+      console.error('Error fetching news:', error);
+    }
+  };
+
   return (
     <div className="p-3 mt-3">
       <Row className="d-flex justify-content-center">
-        <Col md={4} className="mb-4">
-          <ItemNoticia></ItemNoticia>
+      {news.map((item, index) => (
+        <Col md={4} className="mb-4" key={index}>
+        <Noticia  item={item} />
         </Col>
-        <Col md={4} className="mb-4">
-          <ItemNoticia></ItemNoticia>
-        </Col>
-        <Col md={4} className="mb-4">
-          <ItemNoticia></ItemNoticia>
-        </Col>
-        <Col md={4} className="mb-4">
-          <ItemNoticia></ItemNoticia>
-        </Col>
+      ))}
+        
+        
       </Row>
     </div>
   );
