@@ -3,13 +3,13 @@ import ListaNoticias from "./ListaNoticias";
 
 const FormularioNoticias = () => {
     return (
-        <section className="mt-4">
-          <Form className="p-4">
+        <section className="mt-4 ">
+          <Form className="p-4 text-bg-secondary rounded">
           <Form.Group
-            className="mb-3 d-flex justify-content-around"
+            className="mb-3 d-flex justify-content-around "
             controlId="exampleForm.ControlInput1"
           >
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Buscar por categoria:</Form.Label>
             <Form.Select aria-label="Default select example" className="w-75">
               <option>Open this select menu</option>
               <option value="1">One</option>

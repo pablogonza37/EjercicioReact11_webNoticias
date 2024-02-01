@@ -3,7 +3,7 @@ import ItemNoticia from "./ItemNoticia";
 
 const ListaNoticias = () => {
   return (
-    <div className="p-3">
+    <div className="p-3 mt-3">
       <Row className="d-flex justify-content-center">
         <Col md={4} className="mb-4">
           <ItemNoticia></ItemNoticia>

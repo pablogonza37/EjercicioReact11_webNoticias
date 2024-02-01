@@ -3,8 +3,7 @@ import Card from "react-bootstrap/Card";
 
 const ItemNoticia = () => {
   return (
-    <Card>
-      <Card.Img variant="top" src="holder.js/100px180" />
+    <Card className='shadow'>
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>
