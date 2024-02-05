@@ -4,13 +4,14 @@ import React, { useState, useEffect } from 'react';
 
 const ListaNoticias = ({ categoria }) => {
     const [noticias, setNoticias] = useState([]);
+    const apiKey = 'pub_374867eb717c36cfe3081169e0a55ea02fe14'
 
   useEffect(() => {
     fetchNoticias(categoria);
   }, [categoria]);
 
   const fetchNoticias = (categoria) => {
-    fetch(`https://newsdata.io/api/1/news?apikey=pub_374867eb717c36cfe3081169e0a55ea02fe14&country=au,us&category=${categoria}`)
+    fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&country=au,us&category=${categoria}`)
       .then(resp => {
         if (!resp.ok) {
           throw new Error('Respuesta de red incorrecta');
