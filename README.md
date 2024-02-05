@@ -2,6 +2,10 @@
 
 Este proyecto consiste en una aplicación web desarrollada con React que consume la API proporcionada por Newsdata.io. La aplicación permite al usuario seleccionar diferentes categorías de noticias a través de un formulario y muestra las noticias correspondientes en cards.
 
+## Demo
+
+Puedes ver una demostración del proyecto en vivo en [Netlify](https://dancing-paprenjak-765de4.netlify.app/).
+
 ## Componentes
 
 - Título
